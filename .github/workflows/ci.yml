@@ -53,40 +53,16 @@ jobs:
         run: |
           exit_code=0
 
-          # find invalid file names
-          for file in $(find ./commands -type f -name '*.md'); do
-            filename=$(basename "$file")
-            if [[ $filename != 'body.md' && $filename != 'footer.md' ]]; then
-              echo "Invalid file $file. Only body.md and footer.md are allowed" >> $GITHUB_STEP_SUMMARY
-              exit_code=1
-            fi
-          done
-
           # check character count
-          for file in $(find ./commands -type f \( -name 'body.md' -o -name 'footer.md' \)); do
+          for file in $(find ./commands -type f -name '*.md'); do
             echo "Checking $file"
             char_count=$(wc -c <"$file")
             echo "Character count: $char_count"
             filename=$(basename "$file")
             echo "Filename: $filename"
-            if [[ $filename == 'body.md' && $char_count -gt 4096 ]]; then
+            if [[ $char_count -gt 4096 ]]; then
               echo "$file exceeds the 4096 character limit" >> $GITHUB_STEP_SUMMARY
               exit_code=1
-            elif [[ $filename == 'footer.md' && $char_count -gt 2048 ]]; then
-              echo "$file exceeds the 2048 character limit"
-              exit_code=1
-            fi
-            if [[ $filename == 'body.md' ]]; then
-              dir=$(dirname "$file")
-              if [[ -f "$dir/footer.md" ]]; then
-                footer_char_count=$(wc -c <"$dir/footer.md")
-                total_char_count=$((char_count + footer_char_count))
-                if [[ $total_char_count -gt 6000 ]]; then
-                  echo "The combined character count of $file and $dir/footer.md exceeds the 6000 character limit" \
-                    >> $GITHUB_STEP_SUMMARY
-                  exit_code=1
-                fi
-              fi
             fi
           done
 
