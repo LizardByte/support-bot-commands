@@ -1,12 +1,7 @@
 ---
-# lint all markdown files
-
 name: "CI"
 
 on:
-  push:
-    branches:
-      - master
   pull_request:
     branches:
       - master
