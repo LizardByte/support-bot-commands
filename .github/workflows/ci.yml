@@ -30,6 +30,7 @@ jobs:
           markdownlint \
             -f \
             -o markdownlint_report.log \
+            --ignore-path .markdownlintignore \
             '**/*.md'
 
       - name: Print summary
@@ -49,7 +50,7 @@ jobs:
           exit_code=0
 
           # check character count
-          for file in $(find ./commands -type f -name '*.md'); do
+          for file in $(find ./docs -type f -name '*.md'); do
             echo "Checking $file"
             char_count=$(wc -c <"$file")
             echo "Character count: $char_count"
