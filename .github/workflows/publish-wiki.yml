@@ -6,7 +6,7 @@ on:
     branches:
       - master
     paths:
-      - commands/**
+      - docs/**
       - .github/workflows/publish-wiki.yml
 
 concurrency:
@@ -17,7 +17,7 @@ permissions:
   contents: write
 
 jobs:
-  validate:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -26,4 +26,4 @@ jobs:
       - name: Publish wiki
         uses: Andrew-Chen-Wang/github-wiki-action@v4
         with:
-          path: commands/
+          path: docs/
