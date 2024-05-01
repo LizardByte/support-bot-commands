@@ -14,7 +14,7 @@ configuration as follows:
 
 That's it!
 
-:information_source: **Notes**
+ℹ️ **Notes**
 
 - As Receptor does not auto-start as it is not an installed program, you may want to add it as a
   Sunshine pre-launch command. Receptor will remember the last audio stream it was connected to.

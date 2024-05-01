@@ -151,7 +151,7 @@ MD028: true
 # https://github.com/DavidAnson/markdownlint/blob/v0.34.0/doc/md029.md
 MD029:
   # List style
-  style: "one_or_ordered"
+  style: "ordered"
 
 # MD030/list-marker-space : Spaces after list markers
 # https://github.com/DavidAnson/markdownlint/blob/v0.34.0/doc/md030.md
