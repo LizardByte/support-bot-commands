@@ -12,12 +12,6 @@
 </a>
 <br>
 
-<a href="https://mee6.xyz/m/804382334370578482">
-    <img src="https://mee6.xyz/assets/favicon-f1853cdc.png" alt="MEE6" width="24" height="24">
-    <span>MEE6</span>
-</a>
-<br>
-
 <a href="https://paypal.me/ReenigneArcher">
     <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-mark-color.svg" alt="PayPal" width="24" height="24">
     <span>PayPal</span>
