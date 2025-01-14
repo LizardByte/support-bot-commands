@@ -29,4 +29,4 @@ flatpak run --command=sunshine dev.lizardbyte.app.Sunshine --creds {new-username
 ```
 
 This information is also available in our
-[troubleshooting docs](https://docs.lizardbyte.dev/projects/sunshine/en/latest/troubleshooting/general.html#forgotten-credentials)
+[troubleshooting docs](https://docs.lizardbyte.dev/projects/sunshine/latest/md_docs_2troubleshooting.html#forgotten-credentials)
