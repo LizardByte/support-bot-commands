@@ -16,14 +16,6 @@ sunshine --creds {new-username} {new-password}
 
 ## Flatpak (Linux)
 
-### From github.com/LizardByte releases
-
-```bash
-flatpak run --command=sunshine dev.lizardbyte.Sunshine --creds {new-username} {new-password}
-```
-
-### From Flathub
-
 ```bash
 flatpak run --command=sunshine dev.lizardbyte.app.Sunshine --creds {new-username} {new-password}
 ```
