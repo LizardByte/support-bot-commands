@@ -1,5 +1,7 @@
 ---
-name: "Publish wiki"
+name: Publish wiki
+permissions:
+  contents: write
 
 on:
   push:
@@ -12,9 +14,6 @@ on:
 concurrency:
   group: "${{ github.workflow }}-${{ github.ref }}"
   cancel-in-progress: true
-
-permissions:
-  contents: write
 
 jobs:
   publish:
