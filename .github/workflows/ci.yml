@@ -37,13 +37,15 @@ jobs:
       - name: Print summary
         if: failure()
         run: |
-          echo "### Linting report:" >> $GITHUB_STEP_SUMMARY
-          cat markdownlint_report.log >> $GITHUB_STEP_SUMMARY
+          {
+            echo "### Linting report:"
+            cat markdownlint_report.log
 
-          echo "### Suggested changes:" >> $GITHUB_STEP_SUMMARY
-          echo '```diff' >> $GITHUB_STEP_SUMMARY
-          echo "$(git diff)" >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
+            echo "### Suggested changes:"
+            echo '```diff'
+            git diff
+            echo '```'
+          } >> "${GITHUB_STEP_SUMMARY}"
 
       - name: Additional checks
         if: always()
@@ -51,14 +53,14 @@ jobs:
           exit_code=0
 
           # check character count
-          for file in $(find ./docs -type f -name '*.md'); do
+          find ./docs -type f -name '*.md' | while IFS= read -r file; do
             echo "Checking $file"
             char_count=$(wc -c <"$file")
             echo "Character count: $char_count"
             filename=$(basename "$file")
             echo "Filename: $filename"
             if [[ $char_count -gt 4096 ]]; then
-              echo "$file exceeds the 4096 character limit" >> $GITHUB_STEP_SUMMARY
+              echo "$file exceeds the 4096 character limit" >> "${GITHUB_STEP_SUMMARY}"
               exit_code=1
             fi
           done
