@@ -1,7 +1,6 @@
 ---
 name: Publish wiki
-permissions:
-  contents: write
+permissions: {}
 
 on:
   push:
@@ -17,6 +16,8 @@ concurrency:
 
 jobs:
   publish:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
