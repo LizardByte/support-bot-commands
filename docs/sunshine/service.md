@@ -7,7 +7,7 @@ If you installed sunshine through the installer:
 Press `WIN+R`, then type `services.msc` and hit `enter`.
 
 Scroll down until you find `SunshineService`.
- 
+
 If you found it, make sure it is running and set to start automatically.
 
 If you can't find it, go to `C:\Program Files\Sunshine\scripts` and run `install-service.bat` as admin (right click).
