@@ -17,25 +17,25 @@ If you can't find it, go to `C:\Program Files\Sunshine\scripts` and run `install
 Check if the service is running:
 
 ```bash
-systemctl status sunshine
+systemctl status app-dev.lizardbyte.app.Sunshine
 ```
 
 If it is not running, start it:
 
 ```bash
-systemctl --user start sunshine
+systemctl --user start app-dev.lizardbyte.app.Sunshine
 ```
 
 If you want to enable it to start on boot, run:
 
 ```bash
-systemctl --user enable sunshine
+systemctl --user enable app-dev.lizardbyte.app.Sunshine
 ```
 
 If you want to disable the service, run:
 
 ```bash
-systemctl --user disable sunshine
+systemctl --user disable app-dev.lizardbyte.app.Sunshine
 ```
 
 ## Homebrew
