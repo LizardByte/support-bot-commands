@@ -1,4 +1,18 @@
-# support-bot-commands
+<div align="center">
+  <img
+    src="https://raw.githubusercontent.com/LizardByte/.github/refs/heads/master/branding/logos/logo.svg"
+    alt="LizardByte icon"
+    width="256"
+  />
+  <h1 align="center">support-bot-commands</h1>
+  <h4 align="center">Central repository of commands to extend the LizardByte support-bot.</h4>
+</div>
+
+<div align="center">
+  <a href="https://sonarcloud.io/project/overview?id=LizardByte_support-bot-commands"><img src="https://img.shields.io/sonar/quality_gate/LizardByte_support-bot-commands.svg?server=https%3A%2F%2Fsonarcloud.io&style=for-the-badge&logo=sonarqubecloud&label=sonarcloud" alt="SonarCloud"></a>
+</div>
+
+## Overview
 
 This is a central repository of all the commands that the [support-bot](https://github.com/LizardByte/support-bot)
 can execute. The purpose of separating the commands from the bot is to allow for easier updating and
@@ -36,8 +50,9 @@ The commands should be single markdown files and must comply with the following:
 | Disabling Automatic URL Linking | :heavy_check_mark:     | :heavy_check_mark:     | :white_check_mark: |
 | HTML                            | :x:                    | :x:                    | :x:                |
 
-:information_source: Do not use features that are not supported by all targets. For example, do not use line breaks,
-since it is not supported by Discord.
+> [!IMPORTANT]
+> Do not use features that are not supported by all targets.
+> For example, do not use line breaks, since it is not supported by Discord.
 
 For more information, see the [Discord Markdown Guide](https://www.markdownguide.org/tools/discord/) or the
 [Reddit Markdown Guide](https://www.markdownguide.org/tools/reddit/).
