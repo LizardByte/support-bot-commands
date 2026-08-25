@@ -1,2 +1,5 @@
 # ignore JetBrains IDE files
 .idea/
+
+# ignore Node.js dependencies
+node_modules/
