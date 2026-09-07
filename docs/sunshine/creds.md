@@ -20,5 +20,7 @@ sunshine --creds {new-username} {new-password}
 flatpak run --command=sunshine dev.lizardbyte.app.Sunshine --creds {new-username} {new-password}
 ```
 
+> Remember to replace {new-username} and {new-password} with your new credentials. Do not include the curly braces.
+
 This information is also available in our
 [troubleshooting docs](https://docs.lizardbyte.dev/projects/sunshine/latest/md_docs_2troubleshooting.html#forgotten-credentials)
